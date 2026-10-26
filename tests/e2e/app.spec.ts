@@ -428,7 +428,7 @@ test("private inputs and imported filenames never leave the browser; oversized i
     /PRIVATE_SENTINEL_815|PRIVATE_FILENAME_815/,
   );
   expect(
-    requests.every((url) => url.startsWith("http://127.0.0.1:3000/")),
+    requests.every((url) => url.startsWith(`${new URL(page.url()).origin}/`)),
   ).toBe(true);
   expect(requests.length).toBeGreaterThan(0);
   expect(methods.every((method) => method === "GET" || method === "HEAD")).toBe(

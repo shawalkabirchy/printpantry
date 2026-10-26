@@ -1,4 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
+const deployedURL = process.env.PRINTPANTRY_TEST_URL;
 export default defineConfig({
   testDir: "tests/e2e",
   fullyParallel: true,
@@ -8,11 +9,11 @@ export default defineConfig({
   expect: { timeout: 8000 },
   reporter: [["list"], ["json", { outputFile: "test-results/results.json" }]],
   use: {
-    baseURL: "http://127.0.0.1:3000",
+    baseURL: deployedURL ?? "http://127.0.0.1:3000",
     viewport: { width: 1440, height: 1000 },
     trace: "retain-on-failure",
   },
-  webServer: {
+  webServer: deployedURL ? undefined : {
     command: "npm run start",
     url: "http://127.0.0.1:3000",
     reuseExistingServer: true,
