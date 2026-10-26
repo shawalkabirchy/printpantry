@@ -1,0 +1,81 @@
+{
+  "appId": "P03",
+  "formatVersion": 1,
+  "exportedAt": "2026-10-24T17:21:20.238Z",
+  "payload": {
+    "settings": {
+      "currency": "USD",
+      "schemaVersion": 1
+    },
+    "spools": [
+      {
+        "id": "a0000000-0000-4000-8000-000000000001",
+        "label": "Sage workshop PLA",
+        "brand": "Sample studio",
+        "material": "PLA",
+        "colorName": "Sage",
+        "nominalMassMilliGrams": 1000000,
+        "tareMassMilliGrams": 200000,
+        "purchaseCostMinor": 2000,
+        "archived": false,
+        "createdAt": "2026-10-24T17:21:14.001Z",
+        "updatedAt": "2026-10-24T17:21:14.001Z"
+      },
+      {
+        "id": "a0000000-0000-4000-8000-000000000002",
+        "label": "Terracotta PETG",
+        "brand": "Sample studio",
+        "material": "PETG",
+        "colorName": "Terracotta",
+        "nominalMassMilliGrams": 1000000,
+        "tareMassMilliGrams": 200000,
+        "purchaseCostMinor": 2000,
+        "archived": false,
+        "createdAt": "2026-10-24T17:21:14.010Z",
+        "updatedAt": "2026-10-24T17:21:14.010Z"
+      },
+      {
+        "id": "a0000000-0000-4000-8000-000000000003",
+        "label": "Chalk TPU",
+        "brand": "Sample studio",
+        "material": "TPU",
+        "colorName": "Chalk",
+        "nominalMassMilliGrams": 1000000,
+        "tareMassMilliGrams": 200000,
+        "purchaseCostMinor": 2000,
+        "archived": false,
+        "createdAt": "2026-10-24T17:21:14.010Z",
+        "updatedAt": "2026-10-24T17:21:14.010Z"
+      }
+    ],
+    "events": [
+      {
+        "id": "cf57d5a0-9597-4437-8f72-e93e24570b62",
+        "spoolId": "a0000000-0000-4000-8000-000000000001",
+        "kind": "initial",
+        "quantityMilliGrams": 350000,
+        "note": "Opening balance",
+        "createdAt": "2026-10-24T17:21:14.001Z",
+        "sequence": 1
+      },
+      {
+        "id": "37e6606d-32d5-4392-b40d-5f3ddaf07919",
+        "spoolId": "a0000000-0000-4000-8000-000000000002",
+        "kind": "initial",
+        "quantityMilliGrams": 250000,
+        "note": "Opening balance",
+        "createdAt": "2026-10-24T17:21:14.010Z",
+        "sequence": 1
+      },
+      {
+        "id": "e9fa1d50-76c7-4c74-8563-91b219ccc814",
+        "spoolId": "a0000000-0000-4000-8000-000000000003",
+        "kind": "initial",
+        "quantityMilliGrams": 120000,
+        "note": "Opening balance",
+        "createdAt": "2026-10-24T17:21:14.010Z",
+        "sequence": 1
+      }
+    ]
+  }
+}

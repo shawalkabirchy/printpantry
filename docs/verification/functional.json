@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-10-24T17:00:43.849Z",
+  "sourceRunStartedAt": "2026-10-24T16:56:08.729Z",
+  "selectedCases": "functional",
+  "note": "This summary includes only the named group. Functional and performance scenarios are reported separately; statuses are taken directly from Playwright results.",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-1355U",
+    "logicalCores": 12,
+    "memoryGiB": 16
+  },
+  "passed": 30,
+  "cases": [
+    {
+      "file": "app.spec.ts",
+      "title": "create → consume → weigh → reload, archive, restore, and atomic delete",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 6156,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "portfolio demo: no match → weigh → match, exact reserve boundary and material cost",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 4038,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "backup validation, preview cancellation, atomic replacement, and currency lock",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 3851,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "stale tabs reject writes and stale import confirmations without losing committed records",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 4684,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "quota failure preserves the draft and committed state and exports pending recovery",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 2780,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "a transaction abort rolls back spool and initial event together",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 2346,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "blocked storage is explicit and does not silently claim a save",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1978,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "future database versions remain intact instead of being reset",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1754,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "360px layout, keyboard focus, filters, and automated accessibility",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 8693,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "private inputs and imported filenames never leave the browser; oversized imports fail before parsing",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 6387,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "create → consume → weigh → reload, archive, restore, and atomic delete",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 14183,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "portfolio demo: no match → weigh → match, exact reserve boundary and material cost",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 11868,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "backup validation, preview cancellation, atomic replacement, and currency lock",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 11000,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "stale tabs reject writes and stale import confirmations without losing committed records",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 7189,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "quota failure preserves the draft and committed state and exports pending recovery",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 4399,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "a transaction abort rolls back spool and initial event together",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 3390,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "blocked storage is explicit and does not silently claim a save",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 3095,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "future database versions remain intact instead of being reset",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 2904,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "360px layout, keyboard focus, filters, and automated accessibility",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 11387,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "private inputs and imported filenames never leave the browser; oversized imports fail before parsing",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 4975,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "create → consume → weigh → reload, archive, restore, and atomic delete",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 22425,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "portfolio demo: no match → weigh → match, exact reserve boundary and material cost",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 13384,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "backup validation, preview cancellation, atomic replacement, and currency lock",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 12432,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "stale tabs reject writes and stale import confirmations without losing committed records",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 59116,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "quota failure preserves the draft and committed state and exports pending recovery",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 9876,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "a transaction abort rolls back spool and initial event together",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 6735,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "blocked storage is explicit and does not silently claim a save",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 6361,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "future database versions remain intact instead of being reset",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 4497,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "360px layout, keyboard focus, filters, and automated accessibility",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 16522,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "private inputs and imported filenames never leave the browser; oversized imports fail before parsing",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 11525,
+      "stdout": ""
+    }
+  ]
+}

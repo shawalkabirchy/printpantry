@@ -1,0 +1,13 @@
+{
+  "appId": "P03",
+  "formatVersion": 1,
+  "exportedAt": "2026-10-24T17:21:20.246Z",
+  "payload": {
+    "settings": {
+      "currency": "USD",
+      "schemaVersion": 1
+    },
+    "spools": [],
+    "events": []
+  }
+}

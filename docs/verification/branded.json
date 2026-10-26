@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-10-24T17:15:53.500Z",
+  "sourceRunStartedAt": "2026-10-24T17:10:05.484Z",
+  "selectedCases": "branded",
+  "note": "This summary includes only the named group. Functional and performance scenarios are reported separately; statuses are taken directly from Playwright results.",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-1355U",
+    "logicalCores": 12,
+    "memoryGiB": 16
+  },
+  "passed": 4,
+  "cases": [
+    {
+      "file": "app.spec.ts",
+      "title": "create → consume → weigh → reload, archive, restore, and atomic delete",
+      "project": "Google Chrome",
+      "status": "passed",
+      "durationMs": 21652,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "portfolio demo: no match → weigh → match, exact reserve boundary and material cost",
+      "project": "Google Chrome",
+      "status": "passed",
+      "durationMs": 3574,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "create → consume → weigh → reload, archive, restore, and atomic delete",
+      "project": "Microsoft Edge",
+      "status": "passed",
+      "durationMs": 22164,
+      "stdout": ""
+    },
+    {
+      "file": "app.spec.ts",
+      "title": "portfolio demo: no match → weigh → match, exact reserve boundary and material cost",
+      "project": "Microsoft Edge",
+      "status": "passed",
+      "durationMs": 23990,
+      "stdout": ""
+    }
+  ]
+}

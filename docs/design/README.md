@@ -1,0 +1,9 @@
+# PrintPantry visual reference
+
+The built-in image-generation tool produced `inventory-concept.png` as the primary visual reference. The app implements the warm ivory canvas, forest green actions, simple sidebar, open table, concentric material discs, and quiet spool illustration as native UI. Phone cards and required calculator, settings, empty, and error states extend the same system. No generated image is used as an interactive interface.
+
+The reference’s decorative window controls and manual view toggle were omitted; the product switches table/cards responsively. App copy and behavior follow the approved brief. Contrast was checked through the automated accessibility suite.
+
+## Generation prompt
+
+Create a high fidelity full desktop application screenshot for PrintPantry, a local filament inventory tool for 3D print workshops. Functional app, no landing page. Light workshop aesthetic: warm ivory canvas, white surfaces, forest green actions, dark charcoal text, generous useful spacing and system typography. Slim left sidebar with spool mark, PrintPantry, Inventory, Job calculator, Settings & backup, local storage notice and ConsoleLog Studio credit. Main heading: Filament inventory; subtitle: Know what’s on the shelf before your next print. Add spool action. Quiet introductory strip: Make room for your next idea. A clear shelf. A confident start. Summary: 3 active spools, 720 g on hand. Material, color and status filters. Inventory table: Spool, Material, Remaining, Cost / gram, View. Synthetic rows: Sage workshop PLA, Terracotta PETG, Chalk TPU; Sample studio; 350 g/35%, 250 g/25%, 120 g/12% of 1,000 g, $0.02 per gram. Native concentric spool discs and remaining bars. Footer: Measurements are estimates. A fresh weighing keeps things accurate. No authentication, unrelated dashboards, fake business results, photographic assets, or hero eyebrow. Practical Tailwind/shadcn implementation, readable quantities and restrained editorial styling.

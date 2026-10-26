@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-10-24T17:03:28.373Z",
+  "sourceRunStartedAt": "2026-10-24T17:00:46.855Z",
+  "selectedCases": "performance",
+  "note": "This summary includes only the named group. Functional and performance scenarios are reported separately; statuses are taken directly from Playwright results.",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-1355U",
+    "logicalCores": 12,
+    "memoryGiB": 16
+  },
+  "passed": 3,
+  "cases": [
+    {
+      "file": "performance.spec.ts",
+      "title": "maximum supported inventory settles within 200ms",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 4193,
+      "stdout": "{\"browser\":\"chromium\",\"version\":\"156.0.8078.4\",\"spools\":200,\"events\":5000,\"submitToResultsFrameMs\":77.90000000596046}\n"
+    },
+    {
+      "file": "performance.spec.ts",
+      "title": "maximum supported inventory settles within 200ms",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 8368,
+      "stdout": "{\"browser\":\"firefox\",\"version\":\"157.0\",\"spools\":200,\"events\":5000,\"submitToResultsFrameMs\":18}\n"
+    },
+    {
+      "file": "performance.spec.ts",
+      "title": "maximum supported inventory settles within 200ms",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 12905,
+      "stdout": "{\"browser\":\"webkit\",\"version\":\"27.2\",\"spools\":200,\"events\":5000,\"submitToResultsFrameMs\":62}\n"
+    }
+  ]
+}
