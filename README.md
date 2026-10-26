@@ -71,9 +71,9 @@ See [verification evidence](docs/verification.md) for actual results, browser ve
 
 ## Deployment
 
-The current delivery is the local production build. Cloudflare publication is deferred by owner choice; no public deployment URL has been created.
+**Live app: [printpantry.pages.dev](https://printpantry.pages.dev/).** Source: [shawalkabirchy/printpantry](https://github.com/shawalkabirchy/printpantry). Published and verified on 26 October 2026.
 
-See [Cloudflare Pages deployment](docs/deployment.md). Deploy the contents of `out/` on the Free plan. No Functions, D1, Node server, external API, paid plan, or custom domain is required.
+See [Cloudflare Pages deployment](docs/deployment.md) for the Git-connected production build and release checks. Pages builds `main` with `npm run build`, publishes `out/`, and reads Node 24.14.0 from `.node-version`. No Functions, D1, Node server, external API, paid plan, or custom domain is required.
 
 Keep the same production origin to preserve access to browser data. Preview deployments and new domains have separate local workspaces. Before moving domains or rolling back a release with a newer schema, export a backup. Schema v1 has no destructive migrations.
 

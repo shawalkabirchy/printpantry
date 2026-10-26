@@ -13,12 +13,14 @@ export default defineConfig({
     viewport: { width: 1440, height: 1000 },
     trace: "retain-on-failure",
   },
-  webServer: deployedURL ? undefined : {
-    command: "npm run start",
-    url: "http://127.0.0.1:3000",
-    reuseExistingServer: true,
-    timeout: 30_000,
-  },
+  webServer: deployedURL
+    ? undefined
+    : {
+        command: "npm run start",
+        url: "http://127.0.0.1:3000",
+        reuseExistingServer: true,
+        timeout: 30_000,
+      },
   projects: [
     {
       name: "chromium",

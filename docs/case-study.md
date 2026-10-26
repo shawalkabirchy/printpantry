@@ -57,6 +57,6 @@ See [the acceptance evidence](verification.md) for recorded test results, browse
 
 Material estimates exclude machine time, power, labor, and waste beyond the requirement. Maximum workspace size is 200 spools, 5,000 ledger events, and a 10 MiB backup. Local records are bound to one browser origin.
 
-The [recorded walkthrough](portfolio/walkthrough.webm) shows the complete no-match → weigh → match workflow and backup export. Run the local demo using the repository README. Public hosting status is recorded in [deployment notes](deployment.md); no unverified public URL is presented here.
+The [recorded walkthrough](portfolio/walkthrough.webm) shows the complete no-match → weigh → match workflow and backup export. Try the [live PrintPantry demo](https://printpantry.pages.dev/) or run it locally using the repository README. The public release was verified on 26 October 2026; details are in [deployment notes](deployment.md).
 
 For an operational tool for your own team, visit [ConsoleLog Studio](https://consolelog.studio/).

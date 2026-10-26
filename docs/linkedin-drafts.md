@@ -1,6 +1,6 @@
 # PrintPantry — three LinkedIn drafts
 
-Drafts for the owner. These describe a self-initiated studio project with synthetic records. Nothing has been published automatically. Add a verified public demo URL only after deployment succeeds.
+Drafts for the owner. These describe a self-initiated studio project with synthetic records. No social posts have been published automatically. Verified public demo: [printpantry.pages.dev](https://printpantry.pages.dev/).
 
 ## 1. Problem post
 
@@ -40,4 +40,4 @@ Built as a self-initiated ConsoleLog Studio project with synthetic data, not a c
 
 If your team has a small workflow like this, I would be interested in how you handle it today: https://consolelog.studio/
 
-Suggested media: 30–60 second walkthrough. Add the verified Pages demo link before publishing if deployment is complete.
+Suggested media: the 50.92 second walkthrough and the verified Pages demo link above.

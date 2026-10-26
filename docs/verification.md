@@ -15,7 +15,7 @@ Local release checked on **24 October 2026 (UTC)**. All records used for tests, 
 | `npm run test:e2e -- --grep "360px layout\|private inputs" --workers 1` | Passed: 6 targeted cases after final phone navigation adjustment | [Final phone and privacy results](verification/final-ui-and-privacy.json) |
 | `node scripts/capture.mjs` | Passed: 5 screenshots, valid fixture backups, no page errors | [Capture metadata](portfolio/capture.json), [screens and annotations](case-study.md) |
 | Walkthrough duration probe with Playwright's bundled FFmpeg | 50.92 seconds | [Actual screen recording](portfolio/walkthrough.webm), [narration notes](walkthrough.md) |
-| Cloudflare publication and live-origin verification | **Not run — deferred by owner** | [Deployment handoff](deployment.md) |
+| Cloudflare publication and live-origin verification, 26 October 2026 | Passed: Git source built and published; 5 live-site Chromium scenarios passed; all 3 routes support direct navigation and refresh | [Live tests](verification/production.json), [route checks](verification/production-routes.json), [deployment](deployment.md) |
 
 The workflow, performance, and installed-browser reports preserve separate accepted test groups: **37 passing browser cases** in total, plus the 8 domain tests. The final sweep repeated 6 of those scenarios with stronger network assertions; all passed. Windows browser checks run sequentially, with a two-minute startup allowance after a trace showed a 47-second blank-page launch. The independent calculation check still enforces 200 ms. Accessibility scans wait for client navigation, the destination heading, and the document title before inspecting the loaded screen.
 
@@ -34,7 +34,7 @@ The workflow, performance, and installed-browser reports preserve separate accep
 | **G-A3 — Reliable records** | Reload persistence, two-tab stale writes, stale replacement preview, aborted transaction, atomic creation/deletion, future database version preservation. | Passed | Functional reports and transaction tests; [storage implementation](../src/lib/storage.ts) |
 | **G-A4 — Privacy** | Observe browser requests during private spool entry and file selection/import/cancellation. Check private text and filenames never occur in requests; no foreign-origin calls. All observed requests are GET/HEAD with no bodies. Runtime assets remain local. | Passed | Functional private-input cases; [final sweep](verification/final-ui-and-privacy.json) |
 | **G-A5 — Bounded work** | Reject over 200 spools / 5,000 events and >10 MiB backup before replacement; validate decimal magnitude before conversion; measure maximum-size calculation and allow staged results/history access. | Passed | Domain tests; privacy oversize-import cases; performance report |
-| **G-A6 — Evidence** | Preserve commands, actual engine versions, reference hardware, timings and explicit unavailable checks. | Passed for local handoff | This report and linked machine-readable results; hosted checks remain Not run |
+| **G-A6 — Evidence** | Preserve commands, actual engine versions, reference hardware, timings and explicit unavailable checks. | Passed for local and published handoff | This report and linked machine-readable results; actual Safari remains Not run |
 
 Automated accessibility checks supplement keyboard interaction and visual inspection. They are not an accessibility certification. Failure injection runs in isolated browser contexts and does not open an existing personal browser profile.
 
@@ -55,8 +55,14 @@ The measured fixture contains **200 spools and 5,000 events**. Each number is on
 
 The production export, rather than the development server, is used for browser tests. Direct navigation and refresh work for all three routes. Browser-created spool IDs open inside inventory and require no dynamic routes. Screenshot sizes are 1440 × 960 desktop and 360 × 800 phone; test desktop viewports are 1440 × 1000. In-app-browser inspection and the capture script found no application console/page errors.
 
-## Delivery limits
+## Published release — 26 October 2026
 
-The owner selected **local delivery for now**. The saved Cloudflare authorization lacked `pages:write` (API error 10000); no Pages project or deployment was created. Provider authorization, a public URL, HTTPS-origin workflow checks, and actual Safari testing are **Not run**. No social posts or agency-website changes were published.
+The local handoff on 24 October was followed by the owner's request to push and publish on 26 October. Source is now on [GitHub](https://github.com/shawalkabirchy/printpantry) and the app is live at [printpantry.pages.dev](https://printpantry.pages.dev/). Cloudflare successfully cloned the repository, built the static export using Node 24.14.0, and published it without Functions or web analytics.
+
+The published origin passed five existing Chromium scenarios: create/consume/weigh/reload/archive/delete; no-match/weigh/match and cost boundaries; backup cancellation/replacement and currency lock; 360 px keyboard/focus/axe checks; private-input/filename isolation and oversize import rejection. The privacy check observed only same-origin GET/HEAD requests with no request bodies. These are additional release checks; the earlier local multi-browser evidence remains dated 24 October.
+
+Direct navigation and refresh were separately checked for `/`, `/calculator/`, and `/settings/`, with their expected headings and HTTP 200 responses. Desktop and phone captures are retained as [deployed desktop](verification/deployed-desktop.png) and [deployed phone](verification/deployed-mobile.png). No application page or console errors were observed in that capture.
+
+Browser plugin not available; the repository's Playwright workflow was used. The production command and deployment configuration are recorded in [deployment notes](deployment.md). Real Safari and a new full multi-engine run against the public origin are **Not run**. No social posts or agency-website changes were published.
 
 Records belong to one browser profile and origin. Site-data clearing, browser eviction, or changing domains can remove access to them. Export a JSON backup regularly and before moving origins. This release has no accounts, sync, printer integration, or installed offline/PWA support.

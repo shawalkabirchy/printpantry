@@ -1,32 +1,44 @@
 # Cloudflare Pages deployment
 
-**Current handoff: local build, as requested by the owner.** The saved Cloudflare authorization lacks `pages:write` (API error 10000). No Pages project or deployment was created. Authorization and live-origin verification are deferred; the steps below are the deployment handoff, not evidence of a published site.
+**Live app: [printpantry.pages.dev](https://printpantry.pages.dev/).** Published and verified on **26 October 2026** from [shawalkabirchy/printpantry](https://github.com/shawalkabirchy/printpantry).
 
 PrintPantry is a static Next.js export. The build must produce `out/index.html`, `out/calculator/index.html`, `out/settings/index.html`, local assets, and the third-party notices file. No runtime credentials belong in the application.
 
-## Release gate
+## Production configuration
 
-Run the README verification commands against the release source and review `docs/verification.md`. Use an authenticated Cloudflare account on the Free plan. Never enable paid resources to bypass an error. Recheck current Pages terms and quotas before publishing.
+| Setting | Value |
+| --- | --- |
+| Pages project | `printpantry` |
+| Repository / production branch | `shawalkabirchy/printpantry` / `main` |
+| Build command | `npm run build` |
+| Published directory | `out` |
+| Node runtime | `24.14.0`, pinned in `.node-version` |
+| Build image | Pages v3 |
+| Runtime server / Functions | None |
+| Web analytics | Disabled |
+| Preview deployments / PR comments | Disabled |
 
-## Direct Upload
+Only static application assets are published. Source, portfolio media, fixtures, and test reports stay in GitHub and are not part of `out/`. The application needs no runtime credentials, paid resource, or custom domain. No billing settings were changed.
 
-1. Run `npm ci`, `node scripts/licenses.mjs`, and `npm run build` with Node 24.
-2. In Cloudflare’s Workers & Pages dashboard, choose **Pages → Direct Upload** and a project name such as `printpantry`.
-3. Upload the `out/` directory (or a ZIP containing its files at the ZIP root). Do not upload source, node_modules, fixtures, test results, or the portfolio video.
-4. Use the resulting verified `*.pages.dev` URL. No new domain purchase is needed.
-5. Test `/`, `/calculator/`, `/settings/`, refreshing each URL, adding a spool, saving a measurement, and exporting/restoring a backup on that deployed origin.
+The first verified production deployment is `63720a88-1c94-4396-8912-2a7bdb883715`, built from commit `eeb73d2be66ea3961b338bf8b03db39be32ce1f6`. Its immutable URL is [63720a88.printpantry.pages.dev](https://63720a88.printpantry.pages.dev/). The release was explicitly triggered through the Pages API after the source push.
 
-For an existing authenticated CLI setup, the equivalent upload is:
+## Publish an update
 
-```sh
-npx wrangler pages deploy out --project-name printpantry
+1. Run `npm ci`, `npm run typecheck`, `npm test`, and `npm run build` with Node 24.14.0. Regenerate notices with `node scripts/licenses.mjs` when dependencies change.
+2. Commit and push to `main`. Production deployments are enabled for this branch.
+3. Check the Pages project's deployment list. If a push has not queued a build, choose **Create deployment** for `main` in the Cloudflare dashboard.
+4. Wait for the clone, build, and deploy stages to succeed. Confirm that the deployment's commit matches the pushed source.
+5. Check `/`, `/calculator/`, and `/settings/` by direct navigation and refresh, then verify the workflow with synthetic records in an isolated browser profile.
+
+The existing Playwright suite can test the published origin without launching a local server. For example, in PowerShell:
+
+```powershell
+$env:PRINTPANTRY_TEST_URL = 'https://printpantry.pages.dev'
+npm run test:e2e -- --project=chromium --grep 'create.*consume|portfolio demo|backup validation|360px layout|private inputs' --workers 1
+Remove-Item Env:PRINTPANTRY_TEST_URL
 ```
 
-The project must exist in the intended account, and the actual deployment URL must come from Cloudflare’s successful response. Keep credentials outside source control. `wrangler whoami` checks existing authentication; `wrangler login` is an interactive owner sign-in step.
-
-## Optional Git-based builds
-
-If the owner connects a repository, use a private or public repository according to their chosen visibility. Build command: `npm run build`. Output directory: `out`. Pin Node 24 in the provider build environment. The repository is not automatically published or pushed by the local implementation.
+See [verification](verification.md), [the five passing live-site tests](verification/production.json), and [direct-navigation/refresh evidence](verification/production-routes.json). Tests use synthetic records in new browser contexts; they never open a personal browser profile.
 
 ## Recovery and rollback
 
@@ -34,4 +46,4 @@ Export a JSON backup before a domain change or any later schema upgrade. A diffe
 
 No backend data restore, authentication setup, or secrets rotation is required for this local-only release. Browser backup restoration is the recovery operation.
 
-References: [Next.js static exports](https://nextjs.org/docs/app/guides/static-exports), [Cloudflare static Next.js](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-static-nextjs-site/), [Pages pricing](https://developers.cloudflare.com/pages/functions/pricing/).
+References: [Next.js static exports](https://nextjs.org/docs/app/guides/static-exports), [Cloudflare static Next.js](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-static-nextjs-site/), [Git integration](https://developers.cloudflare.com/pages/configuration/git-integration/), [build runtime overrides](https://developers.cloudflare.com/pages/configuration/build-image/), [static asset pricing](https://developers.cloudflare.com/pages/functions/pricing/).

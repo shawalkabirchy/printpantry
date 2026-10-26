@@ -1,0 +1,30 @@
+{
+  "verifiedAt": "2026-10-26T13:32:39.090Z",
+  "origin": "https://printpantry.pages.dev",
+  "commit": "eeb73d2be66ea3961b338bf8b03db39be32ce1f6",
+  "browser": "156.0.8078.4",
+  "routes": [
+    {
+      "path": "/",
+      "directNavigation": 200,
+      "refresh": 200,
+      "heading": "Filament inventory"
+    },
+    {
+      "path": "/calculator/",
+      "directNavigation": 200,
+      "refresh": 200,
+      "heading": "A confident next print"
+    },
+    {
+      "path": "/settings/",
+      "directNavigation": 200,
+      "refresh": 200,
+      "heading": "A home for your records"
+    }
+  ],
+  "desktop": "1440x960",
+  "mobile": "360x800",
+  "pageAndConsoleErrors": [],
+  "syntheticSampleSpools": true
+}
